@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="sv">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Keramik & Inredning</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <a href="index.html" class="nav-logo">Keramik</a>
+
+      <!-- Hamburgerknapp -->
+      <button class="menu-toggle" id="mobile-menu" aria-label="Öppna meny">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <ul class="nav-links">
+        <li><a href="about.html">Om oss</a></li>
+        <li><a href="collection.html">Kollektioner</a></li>
+        <li><a href="contact.html">Kontakt</a></li>
+        <li><a href="#Nyhetsbrev">Nyhetsbrev</a></li>
+      </ul>
+    </nav>
+
+    <header class="hero-header">
+      <img
+        src="Images/Header.jpg"
+        alt="Tallrikar i keramik"
+        class="hero-image"
+      />
+      <div class="hero-overlay"></div>
+
+      <div class="hero-content">
+        <h1 class="hero-title">Keramik</h1>
+        <p class="hero-subtitle">( Här hittar du allt inom unikt hantverk )</p>
+
+        <a href="collection.html" class="hero-btn">Våra produkter</a>
+      </div>
+    </header>
+
+    <h2>Våra kategorier</h2>
+    <div class="kategori-rad">
+      <div class="kategori-item">
+        <img src="Images/Koppar.jpg" alt="Koppar" />
+        <div class="kategori-text">Koppar</div>
+      </div>
+      <div class="kategori-item">
+        <img src="Images/Skålar.jpg" alt="Skålar" />
+        <div class="kategori-text">Skålar</div>
+      </div>
+      <div class="kategori-item">
+        <img src="Images/Tallrikar.jpg" alt="Tallrikar" />
+        <div class="kategori-text">Tallrikar</div>
+      </div>
+      <div class="kategori-item">
+        <img src="Images/Speglar.jpg" alt="Speglar" />
+        <div class="kategori-text">Speglar</div>
+      </div>
+      <div class="kategori-item">
+        <img src="Images/Ljusstakar.jpg" alt="Ljusstakar" />
+        <div class="kategori-text">Ljusstakar</div>
+      </div>
+      <div class="kategori-item">
+        <img src="Images/ringfat.jpg" alt="ringfat" />
+        <div class="kategori-text">Ringfat</div>
+      </div>
+      <div class="kategori-item">
+        <img src="Images/Magneter.jpg" alt="magneter" />
+        <div class="kategori-text">Magneter</div>
+      </div>
+      <div class="kategori-item">
+        <img src="Images/doftljus.jpg" alt="doftljus" />
+        <div class="kategori-text">Doftljus</div>
+      </div>
+      <div class="kategori-item">
+        <img src="Images/Takeaway.jpg" alt="takeaway" />
+        <div class="kategori-text">Takeaway</div>
+      </div>
+    </div>
+
+    <!-- ==========================================
+   === BÖRJAR: Boka tid för Drejning ===
+   ========================================== -->
+    <section class="process-section">
+      <div class="process-header">
+        <h2>Boka tid för drejning</h2>
+        <p>
+          Kom till vår ateljé och upplev känslan av att skapa eget konsthantverk
+          i lera.
+        </p>
+      </div>
+
+      <div class="process-container">
+        <!-- Alternativ-knappar -->
+        <div class="process-steps">
+          <button class="step-btn active" onclick="switchBooking(0)">
+            <span class="step-number">1</span>
+            <span class="step-label">Prova-på-drejning</span>
+          </button>
+          <button class="step-btn" onclick="switchBooking(1)">
+            <span class="step-number">2</span>
+            <span class="step-label">Privatlektion</span>
+          </button>
+          <button class="step-btn" onclick="switchBooking(2)">
+            <span class="step-number">3</span>
+            <span class="step-label">Grupp & Event</span>
+          </button>
+        </div>
+
+        <!-- Innehållsbox -->
+        <div class="process-content-box">
+          <div class="process-image-wrapper">
+            <img
+              id="bookingImg"
+              src="Images/Koppar.jpg"
+              alt="Drejning i ateljén"
+              class="process-img"
+            />
+          </div>
+          <div class="process-text-wrapper">
+            <span id="bookingPriceTag" class="process-tag"
+              >850 kr / person (2 timmar)</span
+            >
+            <h3 id="bookingTitle">Prova-på-drejning</h3>
+            <p id="bookingDesc">
+              Perfekt för dig som vill testa drejning för första gången! Vi går
+              igenom grunderna och du får skapa dina egna alster under
+              handledning. Lera, bränning och glasering ingår.
+            </p>
+            <div style="margin-top: 25px">
+              <a
+                href="contact.html"
+                class="hero-btn"
+                style="
+                  color: #441910;
+                  border-color: #441910;
+                  background-color: transparent;
+                "
+                >Boka din tid</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ==========================================
+   === SLUTAR: Boka tid för Drejning ===
+   ========================================== -->
+
+    <footer>
+      <div class="footer-row">
+        <!-- Kontakt -->
+        <div class="footer-section">
+          <h3>Kontakt</h3>
+          <p>Exempelgatan 12</p>
+          <p>123 45 Staden</p>
+          <p>E-post: info@exempel.se</p>
+          <p>Telefon: 08-123 45 67</p>
+        </div>
+
+        <!-- Nyhetsbrev -->
+        <div class="footer-section" id="Nyhetsbrev">
+          <h3>Nyhetsbrev</h3>
+          <p>Prenumerera på vårt nyhetsbrev för att inte missa nyheter.</p>
+          <form id="newsletterForm">
+            <input
+              type="email"
+              id="emailInput"
+              placeholder="Din e-postadress..."
+              required
+            />
+            <button type="submit">Prenumerera</button>
+          </form>
+          <div id="thank-you-msg">Tack för din prenumeration! 🎉</div>
+        </div>
+
+        <!-- Följ oss & Betalsätt -->
+        <div class="footer-section">
+          <h3>Följ oss</h3>
+          <div class="footer-social">
+            <a
+              href="https://instagram.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Instagram</a
+            >
+            <a
+              href="https://linkedin.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              >LinkedIn</a
+            >
+          </div>
+          <h3 style="margin-top: 25px">Betalsätt</h3>
+          <p>Kortbetalning, Swish & Klarna</p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Ditt Företag AB. Alla rättigheter reserverade.</p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
